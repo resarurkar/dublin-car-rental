@@ -1,0 +1,13 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - pip install pillow
+  build:
+    commands:
+      - python -m unittest discover -s django_web_app
+artifacts:
+  files:
+    - '**/*'
+  base-directory: django_web_app
